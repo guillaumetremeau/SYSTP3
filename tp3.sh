@@ -46,12 +46,26 @@ while [ $NBESPACE != "0" ]; do
 done
 echo "| $MESSREP :                            |"
 echo "| $REPERTOIRE$ESPACE |"
-echo "| D) $MESSD                 |"
-echo "| F) $MESSF                  |"
-echo "| C) $MESSC                             |"
-echo "| E) $MESSE                                 |"
-echo "| M) $MESSM                                 |"
-echo "| S) $MESSS                  |"
-echo "| Q) $MESSQ                                  |"
+if [ -f ~/no_D ]; then
+	echo "| D) $MESSD                 |"
+fi
+if [ -f ~/no_F ]; then
+	echo "| F) $MESSF                  |"
+fi
+if [ -f ~/no_C ]; then
+	echo "| C) $MESSC                             |"
+fi
+if [ -f ~/no_E ]; then
+	echo "| E) $MESSE                                 |"
+fi
+if [ -f ~/no_M ]; then
+	echo "| M) $MESSM                                 |"
+fi
+if [ -f ~/no_S ]; then
+	echo "| S) $MESSS                  |"
+fi
+if [ -f ~/no_Q ]; then
+	echo "| Q) $MESSQ                                  |"
+fi
 echo "------------------------------------------------------"
 echo "  $MESSCHOICE"
