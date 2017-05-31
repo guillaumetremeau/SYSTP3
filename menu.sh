@@ -113,3 +113,4 @@ while [ $USER != "Q" ]; do
 	esac
 done
 clear
+trap SIGINT SIGQUIT
